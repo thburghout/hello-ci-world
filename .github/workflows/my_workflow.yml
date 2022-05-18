@@ -7,9 +7,9 @@ jobs:
   hello-nedap:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello Nedap
-        run: echo "Hello Nedap"
+      # https://github.com/marketplace/actions/checkout
+      - uses: actions/checkout@v3
 
-      - name: Something else
-        run: echo "else"
+      - name: Check checkout
+        run: cat pom.xml
 
