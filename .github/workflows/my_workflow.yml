@@ -18,7 +18,7 @@ jobs:
           java-version: 17
 
       - name: Build with maven
-        run: mvn build
+        run: mvn --batch-mode --update-snapshots verify
 
 ##      Printing the pom file for checking
 #      - name: Checkout checkout
