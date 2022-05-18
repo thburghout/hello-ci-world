@@ -11,8 +11,18 @@ jobs:
       # https://github.com/marketplace/actions/checkout
       - uses: actions/checkout@v3
 
-      - name: Checkout checkout
-        run: cat pom.xml
+      - name: setup java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: 17
+
+      - name: Build with maven
+        run: mvn build
+
+##      Printing the pom file for checking
+#      - name: Checkout checkout
+#        run: cat pom.xml
 
 
 
